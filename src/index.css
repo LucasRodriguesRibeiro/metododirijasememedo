@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+  --font-cursive: "Dancing Script", cursive;
+}
+
+body {
+  background-color: #0a0705;
+  color: white;
+}
