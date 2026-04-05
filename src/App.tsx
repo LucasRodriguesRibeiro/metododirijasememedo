@@ -120,9 +120,9 @@ export default function App() {
 
           {/* Headline */}
           <h1 className="font-oswald text-[1.5rem] leading-[1.2] font-bold text-center mb-4 uppercase drop-shadow-lg tracking-wide">
-            <span className="text-[#D92570]">Supere o medo de dirigir</span>
+            <span className="text-[#D92570]">Pare de travar no volante</span>
             <br />
-            <span className="text-white">e conquiste sua independência dirigindo</span>
+            <span className="text-white">e volte a dirigir com confiança em até 15 dias — mesmo que hoje você sinta medo só de pensar em sair com o carro</span>
           </h1>
 
           {/* Mockup Image */}
@@ -135,17 +135,62 @@ export default function App() {
           </div>
 
           {/* Body Text */}
-          <div className="text-center text-[0.9rem] leading-snug px-2 mb-auto">
+          <div className="text-center text-[0.9rem] leading-snug px-2 mb-auto mt-4">
             <p className="text-[#D92570] font-bold text-[1.05rem] mb-2 drop-shadow-sm leading-tight">
-              Através de um passo a passo prático e psicológico
+              Um guia simples e prático para voltar ao volante
             </p>
             <p className="text-gray-100 mb-2 font-medium">
-              você aprenderá a controlar a ansiedade antes mesmo de entrar no carro, treinar no seu ritmo com exercícios específicos e desenvolver a confiança para dirigir sozinha.
+              Volte a dirigir de forma segura, no seu ritmo, eliminando o nervosismo com técnicas aplicáveis desde o primeiro dia.
             </p>
           </div>
 
         </div>
       </div>
+
+      {/* FOLD 1.5 - PEDRA NO SAPATO E QUEBRA DE CRENÇA */}
+      <section className="w-full bg-[#200C36] py-16 px-5 flex flex-col items-center relative">
+        <div 
+          className="absolute inset-0 z-0 opacity-30"
+          style={{
+            background: 'radial-gradient(circle at 50% 0%, #49156E 0%, #130722 70%)',
+          }}
+        />
+        
+        <div className="z-10 w-full max-w-md flex flex-col">
+          <div className="bg-[#D92570]/10 border border-[#D92570]/30 rounded-xl p-5 mb-8 text-center text-gray-200">
+             <p className="text-[1.05rem] font-medium leading-relaxed">
+               Se você chegou até aqui, provavelmente já tentou dirigir e travou. Ou até evita pegar o carro sozinha porque sente ansiedade só de pensar em sair...
+             </p>
+          </div>
+
+          <h2 className="font-oswald text-[1.4rem] leading-[1.2] font-bold text-center mb-8 uppercase tracking-wide text-white">
+            E, nesses momentos, <span className="text-[#D92570]">você já se pegou pensando...</span>
+          </h2>
+          
+          <div className="flex flex-col gap-4 mb-10">
+            {[
+              "E se eu travar no meio do trânsito?",
+              "E se eu fizer algo errado e atrapalhar os outros?",
+              "Todo mundo dirige... menos eu.",
+              "Tenho carteira, tenho carro, mas não tenho coragem."
+            ].map((thought, idx) => (
+              <div key={idx} className="bg-[#130722] border border-[#D92570]/30 rounded-xl p-4 flex items-start gap-3 shadow-md">
+                <X className="w-5 h-5 text-[#FF4B4B] shrink-0 mt-0.5" />
+                <p className="text-gray-200 text-[0.95rem] font-medium leading-relaxed italic">
+                  "{thought}"
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="font-oswald text-[1.4rem] leading-[1.2] font-bold text-center mb-4 uppercase tracking-wide text-white">
+            Saiba que a culpa <span className="text-[#D92570]">NÃO É SUA!</span>
+          </h3>
+          <p className="text-gray-300 text-[0.95rem] text-center leading-relaxed font-medium">
+            O problema não é você, nem a sua capacidade. O que acontece é que você tentou aprender sem um <strong className="text-[#D92570]">passo a passo correto focado no lado psicológico</strong>. É por isso que todas as suas tentativas anteriores falharam e só aumentaram o medo.
+          </p>
+        </div>
+      </section>
 
       {/* FOLD 2 */}
       <section className="w-full bg-white text-gray-900 py-16 px-5 flex flex-col items-center">
@@ -238,8 +283,11 @@ export default function App() {
             </h3>
 
             {/* Card Text */}
+            <p className="text-white text-[0.9rem] leading-relaxed drop-shadow-sm font-medium mb-3">
+              O medo de dirigir é psicológico. Quando tentamos forçar a prática sem preparo, o cérebro apenas reforça o pânico. Sem um método, é normal travar.
+            </p>
             <p className="text-white text-[0.9rem] leading-relaxed drop-shadow-sm font-medium">
-              Quando seguimos os exercícios de reprogramação mental com estímulos intensos e progressivos, realizados na sequência certa causamos uma mudança no padrão dos seus pensamentos <strong className="text-white font-bold">desbloqueando de forma acelerada o medo que você sente em pensar em dirigir já nos primeiros exercícios.</strong>
+              Mas, <strong className="text-white font-bold">quando você aplica os exercícios na sequência correta</strong>, seu cérebro começa a reinterpretar o ato de dirigir como algo seguro e natural, destravando o medo.
             </p>
           </div>
         </div>
@@ -256,46 +304,79 @@ export default function App() {
         />
         
         <div className="z-10 w-full max-w-md flex flex-col items-center">
-          <h2 className="font-oswald text-[1.5rem] leading-[1.1] font-bold text-center mb-3 uppercase tracking-wide text-white">
-            O que você vai <span className="text-[#D92570]">aprender</span>
+          <h2 className="font-oswald text-[1.5rem] leading-[1.2] font-bold text-center mb-8 uppercase tracking-wide text-white">
+            📦 O QUE VOCÊ VAI <span className="text-[#D92570]">RECEBER:</span>
           </h2>
-          <p className="text-gray-400 text-center text-[0.9rem] mb-10">
-            Um passo a passo completo, do absoluto zero até a sua independência no volante.
-          </p>
 
-          <div className="w-full flex flex-col gap-3">
-            {courseModules.map((mod, idx) => (
-              <div key={idx} className="w-full bg-[#200C36] rounded-2xl overflow-hidden border border-[#D92570]/20 shadow-lg">
-                <button 
-                  onClick={() => setOpenModule(openModule === idx ? null : idx)}
-                  className="w-full px-5 py-4 flex items-center justify-between bg-gradient-to-r from-[#200C36] to-[#2C1147] hover:from-[#2C1147] transition-colors"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#D92570]/10 flex items-center justify-center shrink-0">
-                      <mod.icon className="text-[#D92570] w-5 h-5" />
-                    </div>
-                    <h3 className="font-oswald text-white text-[1.05rem] font-bold text-left tracking-wide">{mod.title}</h3>
+          <div className="w-full flex flex-col gap-4">
+            
+            <div className="bg-[#200C36] p-5 rounded-2xl border border-[#D92570]/30 shadow-lg flex items-start gap-4">
+              <CheckCircle2 className="w-7 h-7 text-[#25D366] shrink-0 mt-0.5" />
+              <div>
+                <h3 className="text-white font-oswald text-[1.15rem] uppercase tracking-wide leading-tight mb-1">
+                  Método “Dirigir Sem Medo em 15 Dias”
+                </h3>
+                <p className="text-gray-400 text-[0.9rem] leading-relaxed">
+                  Passos simples para destravar mesmo com medo.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#200C36] p-5 rounded-2xl border border-[#D92570]/30 shadow-lg flex items-start gap-4">
+              <CheckCircle2 className="w-7 h-7 text-[#25D366] shrink-0 mt-0.5" />
+              <div>
+                <h3 className="text-white font-oswald text-[1.15rem] uppercase tracking-wide leading-tight mb-1">
+                  Exercícios guiados de controle emocional
+                </h3>
+                <p className="text-gray-400 text-[0.9rem] leading-relaxed">
+                  Para reduzir ansiedade antes de entrar no carro.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#200C36] p-5 rounded-2xl border border-[#D92570]/30 shadow-lg flex items-start gap-4">
+              <CheckCircle2 className="w-7 h-7 text-[#25D366] shrink-0 mt-0.5" />
+              <div>
+                <h3 className="text-white font-oswald text-[1.15rem] uppercase tracking-wide leading-tight mb-1">
+                  Plano progressivo do zero ao trânsito real
+                </h3>
+                <p className="text-gray-400 text-[0.9rem] leading-relaxed">
+                  Você evolui no seu ritmo, sem pressão.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <div className="bg-[#130722] p-5 rounded-2xl border border-[#D92570]/50 shadow-lg flex flex-col gap-5 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#D92570]/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                <div className="flex items-start gap-4 relative z-10">
+                  <Gift className="w-7 h-7 text-[#D92570] shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-[#D92570] font-oswald text-[1.05rem] uppercase tracking-wide leading-tight mb-1">
+                      <span className="font-bold text-white">Bônus 1:</span> Mecânica básica para mulheres
+                    </h3>
+                    <p className="text-gray-300 text-[0.85rem] leading-relaxed">
+                      Se sinta segura sem depender de ninguém.
+                    </p>
                   </div>
-                  <ChevronDown className={`text-gray-400 w-5 h-5 transition-transform duration-300 shrink-0 ${openModule === idx ? 'rotate-180' : ''}`} />
-                </button>
-                
-                <div 
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${openModule === idx ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}
-                >
-                  <div className="px-5 pb-5 pt-1">
-                    <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-4"></div>
-                    <ul className="space-y-3.5">
-                      {mod.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-gray-300 text-[0.9rem] leading-relaxed">
-                          <CheckCircle2 className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                </div>
+
+                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent relative z-10"></div>
+
+                <div className="flex items-start gap-4 relative z-10">
+                  <Gift className="w-7 h-7 text-[#D92570] shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-[#D92570] font-oswald text-[1.05rem] uppercase tracking-wide leading-tight mb-1">
+                      <span className="font-bold text-white">Bônus 2:</span> Checklist de segurança antes de sair
+                    </h3>
+                    <p className="text-gray-300 text-[0.85rem] leading-relaxed">
+                      Evite erros e ganhe confiança desde o início.
+                    </p>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
+
           </div>
 
 
@@ -416,43 +497,97 @@ export default function App() {
 
               {/* Deliverables List */}
               <div className="w-full flex flex-col gap-4 relative z-10">
-                <p className="text-gray-300 text-sm mb-2 uppercase tracking-wider">Você vai ganhar tudo isso:</p>
+                <p className="text-gray-300 text-sm mb-2 uppercase tracking-wider text-center">O que você vai receber hoje:</p>
                 
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#25D366] shrink-0 mt-0.5" />
-                  <p className="text-white font-oswald text-[1.05rem] uppercase tracking-wide leading-tight">
-                    <span className="font-bold">E-book Dirigir Sem Medo em 15 Dias</span>
-                    <span className="block text-sm font-sans text-gray-400 mt-1 normal-case">Passo a passo prático</span>
-                  </p>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <Plus className="w-5 h-5 text-[#D92570] shrink-0 mt-0.5" />
-                  <p className="text-gray-200 font-oswald text-[1.05rem] uppercase tracking-wide leading-tight">
-                    <span className="font-bold text-white">Bônus 01</span> Mecânica Básica para Mulheres
-                  </p>
+                <div className="bg-[#200C36] p-4 rounded-xl border border-[#D92570]/30 shadow-inner flex flex-col gap-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#25D366] shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-oswald text-[1.1rem] uppercase tracking-wide leading-tight font-bold">
+                        E-book “Dirigir Sem Medo em 15 Dias”
+                      </p>
+                      <p className="text-sm font-sans text-gray-400 mt-1">Plano progressivo do zero ao trânsito real.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#25D366] shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-oswald text-[1.1rem] uppercase tracking-wide leading-tight font-bold">
+                        Exercícios práticos guiados
+                      </p>
+                      <p className="text-sm font-sans text-gray-400 mt-1">Técnicas focadas para você não travar de nervosismo.</p>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Plus className="w-5 h-5 text-[#D92570] shrink-0 mt-0.5" />
-                  <p className="text-gray-200 font-oswald text-[1.05rem] uppercase tracking-wide leading-tight">
-                    <span className="font-bold text-white">Bônus 02</span> Checklist de Segurança Antes de Sair de Casa
-                  </p>
+                <div className="mt-2 text-left">
+                  <p className="text-[#D92570] text-center uppercase tracking-wider mb-3 font-bold text-sm">🎁 Seus Bônus Exclusivos</p>
+                  
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-start gap-3 bg-[#130722] p-3 rounded-lg border border-[#D92570]/20">
+                      <Gift className="w-5 h-5 text-[#D92570] shrink-0 mt-0.5" />
+                      <p className="text-gray-200 text-[0.95rem] leading-tight flex-1">
+                        <span className="font-bold text-white block mb-1">Mecânica Básica para Mulheres</span>
+                        Saiba como cuidar do seu carro de forma simples.
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-3 bg-[#130722] p-3 rounded-lg border border-[#D92570]/20">
+                      <Gift className="w-5 h-5 text-[#D92570] shrink-0 mt-0.5" />
+                      <p className="text-gray-200 text-[0.95rem] leading-tight flex-1">
+                        <span className="font-bold text-white block mb-1">Checklist de Segurança</span>
+                        O que conferir antes de sair para se sentir segura.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Price and CTA */}
-              <div className="w-full mt-10 relative z-10 flex flex-col items-center">
-                <div className="flex flex-col items-center mb-4 mt-2">
-                  <div className="flex items-center gap-1.5 text-gray-400 text-[1.1rem] mb-2">
-                    <span>De</span>
-                    <div className="relative inline-flex items-center justify-center -mt-0.5">
-                      <span className="font-bold">R$ 67,00</span>
-                      <X className="absolute text-[#FF4B4B] w-9 h-9 opacity-85" strokeWidth={3} />
+              <div className="w-full mt-8 relative z-10 flex flex-col items-center">
+                
+                {/* Reforço de Decisão + Ancoragem */}
+                <div className="w-full mb-6 text-center">
+                  <div className="bg-[#D92570]/10 p-5 rounded-xl border border-[#D92570]/20 mb-6 text-left">
+                    <p className="text-white text-[1.05rem] font-bold mb-3 text-center uppercase tracking-wide">Você tem duas escolhas agora:</p>
+                    <div className="flex flex-col gap-3">
+                      <div className="flex items-start gap-2">
+                        <X className="w-5 h-5 text-[#FF4B4B] shrink-0" />
+                        <span className="text-gray-200 text-[0.9rem]">Continuar como está, dependendo dos outros e sentindo ansiedade.</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-[#25D366] shrink-0" />
+                        <span className="text-white text-[0.9rem] font-bold">Resolver isso de uma vez, começando no seu próprio ritmo.</span>
+                      </div>
                     </div>
-                    <span>por apenas</span>
                   </div>
-                  <div className="flex items-start text-[#25D366] -mt-1 drop-shadow-md">
+                  
+                  <div className="text-center text-gray-300 text-[0.95rem] leading-relaxed mb-6 px-2 flex flex-col gap-3">
+                    <p>Se você fosse resolver isso com aulas presenciais…</p>
+                    <p>Você gastaria facilmente <strong className="text-[#FF4B4B] font-bold">R$200 a R$500</strong> por sessão.</p>
+                    <p>E ainda dependeria de horário, instrutor e disponibilidade.</p>
+                    <p className="text-white font-medium mt-2 bg-[#D92570]/20 border border-[#D92570]/30 py-3 px-4 rounded-xl">Mas aqui você resolve no seu tempo…<br />sem pressão…<br />e sem depender de ninguém.</p>
+                  </div>
+                  
+                  <div className="text-center text-white mb-2 flex flex-col gap-4">
+                    <p className="text-gray-400 text-[1.1rem]">Hoje você não vai pagar <span className="line-through px-1">R$97</span>... nem <span className="line-through px-1">R$47</span>...</p>
+                    
+                    <div className="text-gray-300 text-[1.05rem] italic leading-relaxed my-2">
+                      <p>Imagine você daqui a 15 dias…</p>
+                      <p className="mt-3">Entrando no carro com calma…</p>
+                      <p>Saindo sozinha…</p>
+                      <p>Sem depender de ninguém…</p>
+                      <p className="not-italic font-bold text-white text-[1.1rem] mt-4">Agora me diz:</p>
+                      <p className="not-italic font-bold text-[#D92570] text-[1.2rem] mt-1 mb-2">Vale R$17 pra começar isso hoje?</p>
+                    </div>
+
+                    <p className="text-[#25D366] font-bold text-lg mt-1 uppercase tracking-wider">👉 Apenas</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center mb-2">
+                  <div className="flex items-start text-[#25D366] drop-shadow-md -mt-2">
                     <span className="text-3xl font-bold mt-3 mr-1">R$</span>
                     <span className="font-oswald text-[6rem] font-bold leading-none tracking-tighter">17</span>
                     <span className="text-4xl font-bold mt-4 ml-1">,00</span>
@@ -468,15 +603,30 @@ export default function App() {
                   <button className="w-full bg-gradient-to-b from-[#25D366] to-[#1da851] hover:from-[#20bd5a] hover:to-[#199446] text-white rounded-2xl py-4 px-4 shadow-[0_8px_25px_rgba(37,211,102,0.4)] transition-all transform hover:scale-[1.02] active:scale-95 flex flex-col items-center justify-center border border-[#4ade80]/40 relative overflow-hidden group">
                     <div className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-700 ease-in-out"></div>
                     <span className="font-oswald text-[1.4rem] uppercase tracking-wider font-bold drop-shadow-md">
-                      Quero Garantir Minha Vaga
+                      Quero dirigir sem medo agora
                     </span>
                   </button>
                 </a>
                 
-                <div className="mt-4 flex items-center justify-center gap-2 text-gray-400 text-xs">
-                  <ShieldCheck className="w-4 h-4 text-gray-500" />
-                  <span>Pagamento seguro via Hotmart</span>
+                <div className="w-full flex flex-col items-center gap-1.5 mt-4 mb-2">
+                  <span className="text-gray-400 text-[0.85rem] font-medium">✓ Mesmo que você tenha muito medo hoje</span>
+                  <span className="text-gray-400 text-[0.85rem] font-medium">✓ Funciona mesmo se você já tentou antes</span>
                 </div>
+
+                <div className="w-full flex items-center justify-center gap-5 mt-2 mb-5">
+                  <div className="flex items-center gap-1.5 text-gray-300 text-[0.85rem]">
+                    <CheckCircle2 className="w-4 h-4 text-[#25D366]" />
+                    <span>Acesso imediato</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-gray-300 text-[0.85rem]">
+                    <ShieldCheck className="w-4 h-4 text-[#25D366]" />
+                    <span>Garantia 7 dias</span>
+                  </div>
+                </div>
+
+                <p className="text-[0.8rem] font-bold text-[#FF4B4B] uppercase tracking-wide text-center bg-[#FF4B4B]/10 py-2 px-4 rounded-full w-full border border-[#FF4B4B]/20">
+                  Esse valor promocional pode sair do ar a qualquer momento
+                </p>
               </div>
 
             </div>
