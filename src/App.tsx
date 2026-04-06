@@ -108,22 +108,38 @@ export default function App() {
               </div>
               
               {/* Logo Text */}
-              <div className="flex flex-col items-start justify-center leading-[0.85]">
-                <span className="text-white font-bold text-[2rem] tracking-tighter">MENTE NO</span>
-                <span className="text-white font-bold text-[2rem] tracking-tighter">CONTROLE</span>
+              <div className="flex flex-col items-start justify-center leading-[0.95] mt-1 relative">
+                <span className="text-[#D92570] font-bold text-[1.05rem] tracking-wide uppercase drop-shadow-sm">Guia Prático:</span>
+                <span className="text-white font-bold text-[1.6rem] tracking-tighter uppercase mt-0.5">Dirigir Sem Medo</span>
               </div>
             </div>
-            <span className="text-[#D92570] font-cursive text-[1.8rem] mt-1 -rotate-2 drop-shadow-md">
-              Dirija Sem Medo
-            </span>
           </div>
 
           {/* Headline */}
-          <h1 className="font-oswald text-[1.5rem] leading-[1.2] font-bold text-center mb-4 uppercase drop-shadow-lg tracking-wide">
-            <span className="text-[#D92570]">Pare de travar no volante</span>
-            <br />
-            <span className="text-white">e volte a dirigir com confiança em até 15 dias — mesmo que hoje você sinta medo só de pensar em sair com o carro</span>
+          <h1 className="font-oswald text-[1.9rem] leading-[1.1] font-bold text-center mb-4 drop-shadow-lg tracking-wide text-white uppercase px-2">
+            Você tem CNH, mas <span className="text-[#D92570]">evita dirigir?</span>
           </h1>
+          
+          {/* Subhead */}
+          <p className="text-center text-white text-[1.1rem] leading-snug font-medium mb-6 px-2 drop-shadow-sm">
+            Destrave o medo e volte a dirigir com segurança em até <strong className="text-[#D92570]">15 dias</strong> — mesmo que hoje você dependa de alguém pra tudo.
+          </p>
+
+          {/* 3 Bullets */}
+          <div className="w-full flex flex-col items-center gap-2 mb-6 text-gray-100 font-medium text-[0.95rem]">
+            <div className="flex items-center gap-3 w-full max-w-[280px] bg-[#130722]/50 py-2 px-3 rounded-lg border border-[#D92570]/20">
+              <CheckCircle2 className="w-5 h-5 text-[#25D366] shrink-0" />
+              <span>Volte a dirigir com segurança</span>
+            </div>
+            <div className="flex items-center gap-3 w-full max-w-[280px] bg-[#130722]/50 py-2 px-3 rounded-lg border border-[#D92570]/20">
+              <CheckCircle2 className="w-5 h-5 text-[#25D366] shrink-0" />
+              <span>Pare de depender dos outros</span>
+            </div>
+            <div className="flex items-center gap-3 w-full max-w-[280px] bg-[#130722]/50 py-2 px-3 rounded-lg border border-[#D92570]/20">
+              <CheckCircle2 className="w-5 h-5 text-[#25D366] shrink-0" />
+              <span>Mesmo que já tenha tentado antes</span>
+            </div>
+          </div>
 
           {/* Mockup Image */}
           <div className="w-full flex justify-center mb-5">
@@ -134,21 +150,18 @@ export default function App() {
             />
           </div>
 
-          {/* Body Text */}
-          <div className="text-center text-[0.9rem] leading-snug px-2 mb-auto mt-4">
-            <p className="text-[#D92570] font-bold text-[1.05rem] mb-2 drop-shadow-sm leading-tight">
-              Um guia simples e prático para voltar ao volante
-            </p>
-            <p className="text-gray-100 mb-2 font-medium">
-              Volte a dirigir de forma segura, no seu ritmo, eliminando o nervosismo com técnicas aplicáveis desde o primeiro dia.
+          {/* Frase de Quebra de Crença Highlight */}
+          <div className="bg-[#D92570] text-white py-3 px-5 mb-auto mt-4 rounded-xl shadow-[0_10px_20px_rgba(217,37,112,0.3)] transform -rotate-1 w-full max-w-[320px]">
+            <p className="font-oswald text-[1.15rem] font-bold text-center uppercase tracking-wide leading-tight drop-shadow-sm">
+              O problema não é você.<br />É a forma que te ensinaram.
             </p>
           </div>
 
         </div>
       </div>
 
-      {/* FOLD 1.5 - PEDRA NO SAPATO E QUEBRA DE CRENÇA */}
-      <section className="w-full bg-[#200C36] py-16 px-5 flex flex-col items-center relative">
+      {/* FOLD 1.5 - IDENTIFICAÇÃO */}
+      <section className="w-full bg-[#200C36] py-14 px-5 flex flex-col items-center relative">
         <div 
           className="absolute inset-0 z-0 opacity-30"
           style={{
@@ -156,39 +169,42 @@ export default function App() {
           }}
         />
         
-        <div className="z-10 w-full max-w-md flex flex-col">
-          <div className="bg-[#D92570]/10 border border-[#D92570]/30 rounded-xl p-5 mb-8 text-center text-gray-200">
-             <p className="text-[1.05rem] font-medium leading-relaxed">
-               Se você chegou até aqui, provavelmente já tentou dirigir e travou. Ou até evita pegar o carro sozinha porque sente ansiedade só de pensar em sair...
-             </p>
-          </div>
-
-          <h2 className="font-oswald text-[1.4rem] leading-[1.2] font-bold text-center mb-8 uppercase tracking-wide text-white">
-            E, nesses momentos, <span className="text-[#D92570]">você já se pegou pensando...</span>
-          </h2>
+        <div className="z-10 w-full max-w-md flex flex-col items-center">
           
-          <div className="flex flex-col gap-4 mb-10">
-            {[
-              "E se eu travar no meio do trânsito?",
-              "E se eu fizer algo errado e atrapalhar os outros?",
-              "Todo mundo dirige... menos eu.",
-              "Tenho carteira, tenho carro, mas não tenho coragem."
-            ].map((thought, idx) => (
-              <div key={idx} className="bg-[#130722] border border-[#D92570]/30 rounded-xl p-4 flex items-start gap-3 shadow-md">
-                <X className="w-5 h-5 text-[#FF4B4B] shrink-0 mt-0.5" />
-                <p className="text-gray-200 text-[0.95rem] font-medium leading-relaxed italic">
-                  "{thought}"
-                </p>
-              </div>
-            ))}
+          <div className="w-full mb-10 flex flex-col gap-4">
+            <div className="bg-[#130722] border border-[#FF4B4B]/30 rounded-xl p-5 shadow-lg border-l-4 border-l-[#FF4B4B] transform hover:scale-[1.01] transition-transform">
+              <p className="text-gray-300 text-[1rem] font-medium leading-relaxed">
+                Você tirou a CNH…<br/>
+                <strong className="text-[#FF4B4B]">Mas evita dirigir sempre que pode.</strong>
+              </p>
+            </div>
+            
+            <div className="bg-[#130722] border border-[#FF4B4B]/30 rounded-xl p-5 shadow-lg border-l-4 border-l-[#FF4B4B] transform hover:scale-[1.01] transition-transform">
+              <p className="text-gray-300 text-[1rem] font-medium leading-relaxed">
+                Seu carro fica parado…<br/>
+                <strong className="text-[#FF4B4B]">E você depende de alguém pra sair.</strong>
+              </p>
+            </div>
+
+            <div className="bg-[#130722] border border-[#FF4B4B]/30 rounded-xl p-5 shadow-lg border-l-4 border-l-[#FF4B4B] transform hover:scale-[1.01] transition-transform">
+              <p className="text-gray-300 text-[1rem] font-medium leading-relaxed">
+                Você sabe o que fazer…<br/>
+                <strong className="text-[#FF4B4B]">Mas na hora trava.</strong>
+              </p>
+            </div>
           </div>
 
-          <h3 className="font-oswald text-[1.4rem] leading-[1.2] font-bold text-center mb-4 uppercase tracking-wide text-white">
-            Saiba que a culpa <span className="text-[#D92570]">NÃO É SUA!</span>
-          </h3>
-          <p className="text-gray-300 text-[0.95rem] text-center leading-relaxed font-medium">
-            O problema não é você, nem a sua capacidade. O que acontece é que você tentou aprender sem um <strong className="text-[#D92570]">passo a passo correto focado no lado psicológico</strong>. É por isso que todas as suas tentativas anteriores falharam e só aumentaram o medo.
-          </p>
+          {/* Frase de Impacto */}
+          <div className="w-full bg-[#130722] border border-[#D92570]/30 rounded-2xl p-6 text-center shadow-[0_15px_30px_rgba(217,37,112,0.15)] relative overflow-hidden">
+            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_#D92570_0%,_transparent_70%)]"></div>
+            <p className="font-oswald text-[#25D366] font-bold text-[1.4rem] uppercase tracking-wide leading-tight relative z-10">
+              Você não precisa aprender a dirigir.
+            </p>
+            <p className="font-oswald text-white font-bold text-[1.4rem] uppercase tracking-wide leading-tight mt-2 relative z-10">
+              Você precisa destravar.
+            </p>
+          </div>
+          
         </div>
       </section>
 
@@ -482,12 +498,11 @@ export default function App() {
                   <div className="w-14 h-14 rounded-full border-2 border-[#D92570] flex items-center justify-center bg-[#130722]">
                     <Brain className="text-[#D92570] w-8 h-8" />
                   </div>
-                  <div className="flex flex-col">
-                    <span className="font-oswald text-white text-2xl font-bold leading-none tracking-wide">MENTE NO</span>
-                    <span className="font-oswald text-white text-2xl font-bold leading-none tracking-wide">CONTROLE</span>
+                  <div className="flex flex-col justify-center text-left">
+                    <span className="font-oswald text-[#D92570] text-[0.95rem] font-bold leading-tight tracking-wider uppercase mb-0.5">Guia Prático:</span>
+                    <span className="font-oswald text-white text-[1.45rem] font-bold leading-none tracking-wide uppercase">Dirigir Sem Medo</span>
                   </div>
                 </div>
-                <span className="font-dancing text-[#D92570] text-[1.8rem] mt-1">Dirija Sem Medo</span>
               </div>
 
               {/* Headline */}
