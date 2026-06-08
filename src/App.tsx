@@ -31,7 +31,7 @@ export default function App() {
     <div className="bg-white min-h-screen font-sans text-slate-800 overflow-x-hidden selection:bg-rose-500 selection:text-white">
       {/* HEADER BAR */}
       <div className="w-full bg-rose-600 text-white py-2 px-4 text-center text-sm font-medium tracking-wide">
-        ATENÇÃO: Método Exclusivo para Mulheres Habilitadas
+        ATENÇÃO: Comece HOJE e junte-se a mais de 500 mulheres que já venceram o medo de dirigir!
       </div>
 
       {/* 1. HERO SECTION */}
