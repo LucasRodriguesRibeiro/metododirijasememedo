@@ -3,6 +3,7 @@ import { Brain, CheckCircle2, ShieldCheck, X, Check, BookOpen, Car, Map, Heart, 
 
 export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false);
 
   const faqItems = [
     {
@@ -80,17 +81,92 @@ export default function App() {
             />
           </div>
 
-          <a href="#oferta" className="group w-full max-w-lg bg-gradient-to-r from-rose-500 to-rose-700 hover:from-rose-600 hover:to-rose-800 text-white rounded-2xl py-5 px-6 shadow-[0_0_40px_rgba(225,29,72,0.4)] transition-all transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 relative overflow-hidden">
-            <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
-            <span className="font-oswald text-xl md:text-2xl font-bold uppercase tracking-wide">QUERO DESBLOQUEAR MEU MEDO</span>
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </a>
-          
-          <div className="mt-5 flex items-center justify-center gap-5 text-slate-400 text-sm">
-            <div className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Compra Segura</div>
-            <div className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-emerald-400" /> Acesso Imediato</div>
-          </div>
 
+
+        </div>
+      </section>
+
+      {/* 1.5. VSL SECTION */}
+      <section className="w-full bg-slate-100 py-20 px-5 flex flex-col items-center relative overflow-hidden">
+        {/* Elemento de background sutil */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div className="w-full max-w-5xl flex flex-col items-center z-10">
+          <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-200/60 w-full flex flex-col items-center hover:shadow-rose-100/50 transition-shadow duration-500">
+            
+            <h2 className="font-oswald text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4 uppercase tracking-tight">
+              🎥 Assista esta mensagem <span className="text-rose-600">antes de continuar</span>
+            </h2>
+            
+            <p className="text-center text-slate-600 text-lg md:text-xl mb-12 max-w-3xl font-medium leading-relaxed">
+              Descubra por que o problema não é sua capacidade de dirigir, mas o bloqueio emocional que impede você de usar uma habilidade que já possui.
+            </p>
+            
+            {/* VÍDEO CONTAINER */}
+            <div className="w-full aspect-video rounded-3xl overflow-hidden shadow-xl border-4 border-slate-50 mb-12 bg-slate-200 relative group">
+              {/* Brilho ao redor do vídeo */}
+              <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] pointer-events-none z-10"></div>
+              
+              {!isVideoPlaying ? (
+                <div 
+                  className="w-full h-full relative cursor-pointer bg-slate-900"
+                  onClick={() => setIsVideoPlaying(true)}
+                >
+                  <img 
+                    src="/vsl/capap.png" 
+                    alt="Capa do vídeo" 
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-transparent transition-colors">
+                    <div className="w-20 h-20 md:w-24 md:h-24 bg-rose-600 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(225,29,72,0.8)] group-hover:scale-110 transition-transform">
+                      <svg className="w-10 h-10 md:w-12 md:h-12 text-white ml-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <iframe 
+                  src="https://www.youtube.com/embed/3eVauzat-l4?si=r7k50L2-dE1H9p_m&amp;controls=1&amp;rel=0&amp;autoplay=1" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                  className="w-full h-full object-cover"
+                ></iframe>
+              )}
+            </div>
+
+            {/* BULLETS */}
+            <div className="grid md:grid-cols-2 gap-6 w-full mb-12">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-emerald-100 hover:bg-emerald-50/30 transition-colors">
+                <CheckCircle2 className="w-7 h-7 text-emerald-500 shrink-0 mt-0.5" />
+                <span className="text-slate-700 font-medium text-lg leading-snug">Você não precisa aprender a dirigir novamente</span>
+              </div>
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-emerald-100 hover:bg-emerald-50/30 transition-colors">
+                <CheckCircle2 className="w-7 h-7 text-emerald-500 shrink-0 mt-0.5" />
+                <span className="text-slate-700 font-medium text-lg leading-snug">Entenda por que o medo continua mesmo após tirar a CNH</span>
+              </div>
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-emerald-100 hover:bg-emerald-50/30 transition-colors">
+                <CheckCircle2 className="w-7 h-7 text-emerald-500 shrink-0 mt-0.5" />
+                <span className="text-slate-700 font-medium text-lg leading-snug">Descubra como recuperar sua confiança ao volante</span>
+              </div>
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-emerald-100 hover:bg-emerald-50/30 transition-colors">
+                <CheckCircle2 className="w-7 h-7 text-emerald-500 shrink-0 mt-0.5" />
+                <span className="text-slate-700 font-medium text-lg leading-snug">Método simples e progressivo</span>
+              </div>
+            </div>
+
+            {/* TEXTO DE TRANSIÇÃO */}
+            <div className="w-full relative">
+              <div className="absolute left-4 top-0 bottom-0 w-1.5 bg-gradient-to-b from-rose-400 to-rose-600 rounded-full"></div>
+              <p className="text-left text-slate-700 text-lg md:text-xl font-medium bg-gradient-to-r from-rose-50 to-white pl-10 pr-6 py-6 md:py-8 rounded-2xl border border-rose-100/50 leading-relaxed">
+                "Se ao assistir essa mensagem você se identificou, <strong className="text-rose-600">continue lendo</strong> porque o que você vai descobrir a seguir pode mudar completamente sua relação com o volante."
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 
